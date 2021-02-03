@@ -1,10 +1,10 @@
-## Introduction
+## Regularized multi-structural shape modeling of the knee complex based on deep functional maps
 
 <!-- [![DOI](link_to_file.svg)](https_doi_link) -->
 
 This project contains the source code related to the following publication:
 
-TODO: Filip K. Zacharaki I. E., Moustakas K., "Regularized multi-structural shape
+**TODO**: Filip K. Zacharaki I. E., Moustakas K., "Regularized multi-structural shape
 modeling of the knee complex based on deep functional maps".
 
 > The incorporation of a-priori knowledge on the shape of anatomical structures
@@ -27,23 +27,23 @@ modeling of the knee complex based on deep functional maps".
         knee complex in two application scenarios: incomplete or noisy shape
         reconstruction and missing structure estimation.
 
-<img src="doc/KneeSSM_heatmap.png" alt="Statistical Shape Model" width="200"/>
+<img src="doc/KneeSSM_heatmap.png" alt="Statistical Shape Model"/>
 
 ## Requirements
 
-* Matlab (tested in version 2018a)
-* Meshlab: http://www.meshlab.net/
-* Python 3.x
-    - numpy - pip3 install numpy
-    - nibabel - pip3 install nibabel
-    - skimage - pip3 install scikit-image
-    - stl - pip3 install numpy-stl
-- Cpp libraries
-    - flann (tested with v1.7.1; install binaries "http://www.pointclouds.org/downloads/windows.html")
-    - eigen (tested with 3.3.7; header only "http://eigen.tuxfamily.org/index.php?title=Main_Page")
+* **Matlab** (tested in version 2018a)
+* **Meshlab**: http://www.meshlab.net/
+* **Python 3.x**
+    - **numpy** - `pip3 install numpy`
+    - **nibabel** - `pip3 install nibabel`
+    - **skimage** - `pip3 install scikit-image`
+    - **stl** - `pip3 install numpy-stl`
+- **Cpp libraries**
+    - **flann** (tested with v1.7.1; install binaries "http://www.pointclouds.org/downloads/windows.html")
+    - **eigen** (tested with 3.3.7; header only "http://eigen.tuxfamily.org/index.php?title=Main_Page")
 
-* Dataset: Osteoarthritis Initiative (OAI) https://nda.nih.gov/oai/
-    - Labelmaps can be found here:
+* **Dataset**: Osteoarthritis Initiative (OAI) https://nda.nih.gov/oai/
+    - **Labelmaps** can be found here:
       https://opus4.kobv.de/opus4-zib/frontdoor/index/index/docId/6995
 
 ## Repository Overview
@@ -69,10 +69,10 @@ modeling of the knee complex based on deep functional maps".
 * Run `Step_1_MeshPreprocessing.m` to apply a series of filters to the created meshes.
   Processed meshes are saved separately in .off format.
 
-* Run `Step_2_CulcInputs.m` to calculate the 1. geodesic distances of all the points
+* Run `Step_2_CulcInputs.m` to calculate 1. geodesic distances of all the points
   for each mesh 2. Laplacian eigenfunctions 3. SHOT descriptors.
 
-  Tip: To create the `calc_shot.mex` file run in MATLAB command window: 
+  **Tip**: To create the `calc_shot.mex` file run in MATLAB command window: 
   
   ```
   mex -v calc_shot.cpp shot_descriptor.cpp -DUSE_FLANN -I"<flann_install_dir>\include" -I"<eigen_install_dir>"
@@ -94,7 +94,7 @@ modeling of the knee complex based on deep functional maps".
   Multi-shapes with missing structures use the SSMs based on CCA and conduct
   inference for the whole multi-shape.
 
-* (opt) Run `shape_reconstruction.py` to refine the segmentation results based
+* Run `shape_reconstruction.py` to refine the segmentation results based
   the fitted SSM model converted to multi-label mask.
 
 ## License
