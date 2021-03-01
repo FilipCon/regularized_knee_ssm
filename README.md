@@ -1,11 +1,12 @@
 ## Regularized multi-structural shape modeling of the knee complex based on deep functional maps
 
-<!-- [![DOI](link_to_file.svg)](https_doi_link) -->
-
 This project contains the source code related to the following publication:
 
-**TODO**: Filip K. Zacharaki I. E., Moustakas K., "Regularized multi-structural shape
-modeling of the knee complex based on deep functional maps".
+Filip K. Zacharaki I. E., Moustakas K., "Regularized multi-structural shape
+modeling of the knee complex based on deep functional maps". Computerized
+Medical Imaging and Graphics (2021). DOI:
+https://doi.org/10.1016/j.compmedimag.2021.101890
+
 
 > The incorporation of a-priori knowledge on the shape of anatomical structures
         and their variation through Statistical Shape Models (SSMs) has shown to
